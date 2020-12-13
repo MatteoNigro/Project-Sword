@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5244752406776992605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3343306030907012458}
+  - component: {fileID: 4729261373882620092}
+  m_Layer: 0
+  m_Name: PickUpPoint
+  m_TagString: DragPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3343306030907012458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5244752406776992605}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.073, y: -1.091, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8889222296491882333}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4729261373882620092
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5244752406776992605}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.050876856, y: 0.09712863}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.26922274, y: 0.2692237}
+  m_EdgeRadius: 0
 --- !u!1 &8889222296491882334
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,9 +69,9 @@ GameObject:
   - component: {fileID: 8889222296491882332}
   - component: {fileID: 8889222296491882306}
   - component: {fileID: 1704415598}
-  - component: {fileID: 1704415597}
-  - component: {fileID: 1704415599}
-  - component: {fileID: 7136063388260222181}
+  - component: {fileID: 701668066}
+  - component: {fileID: 1647884052}
+  - component: {fileID: 1647884053}
   m_Layer: 8
   m_Name: PlayerSword
   m_TagString: Untagged
@@ -32,7 +89,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.67, y: -1.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 3343306030907012458}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -245,7 +303,7 @@ PolygonCollider2D:
       - {x: -0.85142857, y: -1.02}
       - {x: -0.77428573, y: -0.9542857}
       - {x: -0.7657143, y: -0.94285715}
---- !u!114 &1704415597
+--- !u!114 &701668066
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,20 +315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a31184ba8266f74897f46fcb23c0e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1704415599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8889222296491882334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec9a09799bf05a4da3c4537c36629ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 400
---- !u!114 &7136063388260222181
+  movementVector: {x: 0, y: 0}
+--- !u!114 &1647884052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280,5 +326,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f776ce7a75748a840a47514192e4e967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1647884053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8889222296491882334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25a1da66653aba42852deb8f066e18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
